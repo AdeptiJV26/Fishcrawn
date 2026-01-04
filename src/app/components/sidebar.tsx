@@ -17,8 +17,8 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 bg-secondary/70 text-white flex flex-col z-10">
-      <div className="text-title-01 flex justify-start items-center px-6 text-2xl border-b-2 border-misc-03 font-bold min-h-[60px]">
+    <aside className="w-64 bg-secondary/70 flex flex-col z-10">
+      <div className="text-title-01 flex justify-start items-center px-6 text-2xl border-b-2 border-borderprime font-bold min-h-[60px]">
         FishCrAwn
       </div>
 
@@ -29,12 +29,12 @@ export default function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`hover:bg-misc-03/50 block p-3 rounded transition ${
+              className={`block p-3 rounded transition ${
                 isActive
-                  ? "bg-misc-01 text-txt-03 font-bold shadowl-lg"
-                  : "text-txt-02 hover:bg-misc-01 font-bold"
+                  ? "bg-highlighter text-sidebar-03 font-bold shadowl-lg rounded-lg"
+                  : "text-mode hover:text-sidebar-01 hover:bg-sidebar-02/90 font-bold"
               }`}
-            >
+            > 
               {item.name}
             </Link>
           );

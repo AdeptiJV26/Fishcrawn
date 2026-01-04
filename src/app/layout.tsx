@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link"; // 1. Import Link
+import Link from "next/link"; 
 import "../style/globals.css";
 import ParticlesBG from "./components/particles";
 import LogoutPanel from "./components/logout";
@@ -11,8 +11,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="flex h-screen bg-primary/90 text-slate-900 antialiased">
+    // suppressHydrationWarning is needed because we are changing the class on the server/client
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark')
+              } else {
+                document.documentElement.classList.remove('dark')
+              }
+            `,
+          }}
+        />
+      </head>
+      <body className="flex h-screen bg-primary/90 text-txt-01 antialiased transition-colors duration-300">
         <ParticlesBG />
 
         <Sidebar />

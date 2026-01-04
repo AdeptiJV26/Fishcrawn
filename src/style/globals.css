@@ -1,40 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  /* Backgrounds */
-  --color-primary: #16191a;
-  --color-secondary: #272a2e;
+  /* --- LIGHT MODE (Default Variables) --- */
+  --color-primary: #a7f3d0;
+  --color-secondary: #22c55e;
+  --color-borderprime: #000000;
 
-  /* Element Backgrounds */
-  --color-misc-01: #525c6d;
-  --color-misc-02: #42bfdd;
-  --color-misc-03: #a855f7;
+  --color-highlighter: #000000;
 
-  /* Borders */
-  --color-border-01: #904c77;
-  --color-border-02: #215bf0;
+  --color-title-01: #0f172a;
+  --color-title-02: #ffffff;
 
-  /* Typography */
-  --color-title-01: #6cc1fa;
-  --color-title-02: #FADADD;
+  --color-sidebar-01: #fafafa;
+  --color-sidebar-02: #000000;
+  --color-sidebar-03: #facc15;
 
-  --color-txt-01: #89A6A8;
-  --color-txt-02: #ffffff;
-  --color-txt-03: #F59B0E;
+  --color-button-01: #000000;
+  --color-button-02: #000000;
+
+  --color-mode: #000000;
+
+  --color-icon-01: #000000;
+  --color-icon-02: #facc15;
+
+  --color-text-01: #ffffff;
+
+  --color-particles: #000000;
 }
 
+/* --- DARK MODE OVERRIDES (Outside @theme) --- */
+.dark {
+  --color-primary: #16191a;
+  --color-secondary: #272a2e;
+  --color-borderprime: #FAFAFA;
 
+  --color-highlighter: #000000;
+
+  --color-title-01: #FAFAFA;
+  --color-title-02: #0f172a;
+
+  --color-sidebar-01: #000000;
+  --color-sidebar-02: #FAFAFA;
+  --color-sidebar-03: #FACC15;
+
+  --color-button-01: #f2f2f2;
+  --color-button-02: #FFFFFF;
+
+  --color-mode: #FFFFFF;
+
+  --color-icon-01: #FFFFFF;
+  --color-icon-02: #000000;
+
+  --color-text-01: #ffffff;
+
+  --color-particles: #FFFFFF;
+}
 
 #notFoundImg {
   background-image: url(../app/img/aizen404.png);
   background-repeat: no-repeat;
   background-size: cover;
-    aspect-ratio: 1/1;
+  aspect-ratio: 1/1;
 }
 
 #maintenanceImg {
   background-image: url(../app/img/PageUnderMaintenance.png);
   background-repeat: no-repeat;
-  background-size: cover;  aspect-ratio: 1/1;
+  background-size: cover;
+  aspect-ratio: 1/1;
 }
-

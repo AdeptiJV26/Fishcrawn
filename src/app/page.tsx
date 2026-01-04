@@ -9,20 +9,20 @@ export default function DashboardPage() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="p-6 bg-misc-01 rounded-xl shadow-sm border-2 border-border-01">
-          <p className="text-sm text-txt-02 uppercase">Total Fish Stock  "(kilo)"</p>
-          <p className="text-3xl font-bold">20</p>
+          <p className="text-sm text-txt-02 uppercase">Total Fish Stock</p>
+          <p className="text-3xl text-txt-01 font-bold">20</p>
         </div>
         <div className="p-6 bg-misc-01 rounded-xl shadow-sm border-2 border-border-01">
-          <p className="text-sm text-txt-02 uppercase">Total Produce Stock  "(kilo)"</p>
-          <p className="text-3xl font-bold">1,284</p>
+          <p className="text-sm text-txt-02 uppercase">Total Produce Stock</p>
+          <p className="text-3xl text-txt-01 font-bold">1,284</p>
         </div>
         <div className="p-6 bg-misc-01 rounded-xl shadow-sm border-2 border-border-01">
           <p className="text-sm  text-txt-02 uppercase">Low Stock Alert</p>
-          <p className="text-3xl font-bold text-orange-600">12</p>
+          <p className="text-3xl text-txt-01 font-bold text-orange-600">12</p>
         </div>
         <div className="p-6 bg-misc-01 rounded-xl shadow-sm border-2 border-border-01">
           <p className="text-sm text-txt-02 uppercase">Out of Stock</p>
-          <p className="text-3xl font-bold text-red-600">3</p>
+          <p className="text-3xl text-txt-01 font-bold text-red-600">3</p>
         </div>
       </div>
     </div>
