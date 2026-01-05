@@ -24,7 +24,7 @@ export default function InventoryChartFish() {
     <div className="w-full bg-secondary/30 p-6 rounded-xl border border-misc-03 flex flex-col gap-10">
       {/* ... Toggle Buttons ... */}
       <div className="flex justify-between items-center">
-        <h3 className="text-txt-02 font-bold uppercase tracking-wider">Inventory Analysis</h3>
+        <h3 className="text-txt-02 font-bold uppercase tracking-wider text-title-01">Inventory Analysis</h3>
         <div className="flex bg-secondary/50 p-1 rounded-lg border border-misc-03 text-xs font-bold">
           <button onClick={() => setView("fish")} className={`px-3 py-1 rounded transition ${view === 'fish' ? 'bg-purple-500 text-white' : 'text-txt-01'}`}>FISH</button>
           <button onClick={() => setView("both")} className={`px-3 py-1 rounded transition ${view === 'both' ? 'bg-misc-03 text-white' : 'text-txt-01'}`}>BOTH</button>

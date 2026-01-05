@@ -17,16 +17,22 @@ export default function ThemeToggle() {
   };
 
   return (
-    <div className="flex flex-row gap-4 bg-mode/70 rounded-lg border-primer p-2 w-fit">
-      
-      <div className="flex flex-row h-12 w-12 border-2 border-borderprime rounded-xl h-12 w-12 overflow-hidden bg-sidebar-01">
-        <button
-          onClick={toggleTheme}
-          className="w-full h-full flex items-center justify-center rounded-lg bg-mode text-title-01 transition-all hover:bg-highlighter hover:text-sidebar-03 border-2 border-button-01 shadow-inner active:scale-90"
-          title="Toggle System Theme"
-        >
-          <span className="text-xl leading-none">{isDark ? "🌙" : "☀️"}</span>
-        </button>
+    <div 
+      onClick={toggleTheme}
+      className="flex flex-row gap-2 rounded-2xl border-borderprime border-3 p-2 w-32 bg-zinc-500/70 cursor-pointer select-none"
+    >
+      {/* Light Side Portion */}
+      <div className={`flex-1 flex items-center justify-center h-12 rounded-xl transition-all duration-200 ${
+        !isDark ? "bg-mode-reverse shadow-sm border-3 p-1 border-borderprime" : "bg-transparent"
+      }`}>
+        <span className={`text-xl ${!isDark ? "opacity-100" : "opacity-60"}`}>☀️</span>
+      </div>
+
+      {/* Dark Side Portion */}
+      <div className={`flex-1 flex items-center justify-center h-12 rounded-xl transition-all duration-200 ${
+        isDark ? "bg-mode-reverse shadow-sm border-3 p-1 border-borderprime" : "bg-transparent"
+      }`}>
+        <span className={`text-xl ${isDark ? "opacity-100" : "opacity-60"}`}>🌙</span>
       </div>
     </div>
   );

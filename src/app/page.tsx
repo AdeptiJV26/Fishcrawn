@@ -8,7 +8,7 @@ export default function DashboardPage() {
         <InventoryChartFish />
       </div>
       <div className="flex justify-center items-center mb-4">
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-6 w-full justify-center items-center">
+        <div className="grid grid-cols-4 md:grid-cols-3 gap-6 w-full justify-center items-center">
           <div className="p-6 bg-mode/40 rounded-xl shadow-sm border-2 border-border-01">
             <p className="text-sm text-title-01 uppercase">Total Fish Stock</p>
             <p className="text-3xl text-txt-01 font-bold">20</p>
@@ -23,7 +23,7 @@ export default function DashboardPage() {
       </div>
 
       <div className="flex justify-center items-center mb-04">
-        <div className="grid grid-cols-3 md:grid-cols-2 gap-6 w-full justify-center items-center">
+        <div className="grid grid-cols-4 md:grid-cols-3 gap-6 w-full justify-center items-center">
           <div className="p-6 bg-mode/40 rounded-xl shadow-sm border-2 border-border-01">
             <p className="text-sm  text-title-01 uppercase">Low Stock Alert</p>
             <p className="text-3xl text-txt-01 font-bold text-orange-600">12</p>

@@ -5,7 +5,7 @@ import ThemeToggle from "../components/ThemeToggle";
 export default function Settings() {
   return (
     <>
-      <div className="container w-full">
+      <div className="w-full text-2xl">
         <div className="relative flex flex-col justify-center items-center w-full">
           <span className="w-auto h-auto">
             <GoHome />
@@ -14,11 +14,32 @@ export default function Settings() {
             Settings
           </span>
         </div>
+        <div className="bg-mode/50 border-2 border-borderprime rounded-xl mx-5 mt-10">
+          <div className="flex max-w-none  justify-center items-center my-8">
+            <div className="flex flex-[3] justify-center items-center text-title-02 uppercase font-bold">
+              Day / Night Toggle
+            </div>
+            <div className="flex flex-[2] justify-center items-center">
+              <ThemeToggle />
+            </div>
+          </div>
 
-        <div className="grid grid-cols-5 w-full items-center bg-mode-light border-borderprime border-2 rounded-lg p-2">
-          <div className="col-span-4 text-title-01 ml-2 font-bold">Daylight Toggle</div>
-          <div className="col-span-1 flex justify-center items-center">
-            <ThemeToggle />
+          <div className="flex max-w-none  justify-center items-center my-8">
+            <div className="flex flex-[3] justify-center items-center text-title-02 uppercase font-bold">
+              Password
+            </div>
+            <div className="flex flex-[2] justify-center items-center">
+              <button className="bg-mode-reverse h-12 border-2 border-borderprime aspect-square rounded-lg flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="size-6 text-mode"
+                >
+                  <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
