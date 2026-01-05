@@ -2,7 +2,7 @@
 
 export default function LogoutPanel() {
   return (
-    <header className="bg-secondary/70 h-16 border-b-2 border-borderprime flex items-center justify-end px-3 min-h-[60px]">
+    <header className="bg-secondary/70 h-16 border-b-2 border-borderprime flex items-center justify-end px-3 min-h-[70px]">
       <button className="sm:text-sm md:text-base lg:text-lg uppercase transition font-bold px-3 py-3 rounded-2xl border-2 border-button-01 hover:bg-button-02 hover:text-icon-02 text-icon-01">
         <svg
           xmlns="http://www.w3.org/2000/svg"

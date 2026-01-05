@@ -19,6 +19,7 @@
   --color-button-02: #000000;
 
   --color-mode: #000000;
+  --color-mode-reverse: #ffffff;
 
   --color-icon-01: #000000;
   --color-icon-02: #facc15;
@@ -32,28 +33,29 @@
 .dark {
   --color-primary: #16191a;
   --color-secondary: #272a2e;
-  --color-borderprime: #FAFAFA;
+  --color-borderprime: #fafafa;
 
   --color-highlighter: #000000;
 
-  --color-title-01: #FAFAFA;
+  --color-title-01: #fafafa;
   --color-title-02: #0f172a;
 
   --color-sidebar-01: #000000;
-  --color-sidebar-02: #FAFAFA;
-  --color-sidebar-03: #FACC15;
+  --color-sidebar-02: #fafafa;
+  --color-sidebar-03: #facc15;
 
   --color-button-01: #f2f2f2;
-  --color-button-02: #FFFFFF;
+  --color-button-02: #ffffff;
 
-  --color-mode: #FFFFFF;
+  --color-mode: #ffffff;
+  --color-mode-reverse: #000000;
 
-  --color-icon-01: #FFFFFF;
+  --color-icon-01: #ffffff;
   --color-icon-02: #000000;
 
   --color-text-01: #ffffff;
 
-  --color-particles: #FFFFFF;
+  --color-particles: #ffffff;
 }
 
 #notFoundImg {

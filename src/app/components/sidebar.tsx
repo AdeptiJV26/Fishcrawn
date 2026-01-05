@@ -18,7 +18,7 @@ export default function Sidebar() {
 
   return (
     <aside className="w-64 bg-secondary/70 flex flex-col z-10">
-      <div className="text-title-01 flex justify-start items-center px-6 text-2xl border-b-2 border-borderprime font-bold min-h-[60px]">
+      <div className="text-title-01 flex justify-start items-center px-6 text-2xl border-b-2 border-borderprime font-bold min-h-[70px]">
         FishCrAwn
       </div>
 
