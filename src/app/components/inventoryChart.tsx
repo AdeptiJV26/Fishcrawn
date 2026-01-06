@@ -21,14 +21,14 @@ export default function InventoryChartFish() {
   const depthWidth = isBoth ? "w-1" : "w-3";
 
   return (
-    <div className="w-full bg-secondary/30 p-6 rounded-xl border border-misc-03 flex flex-col gap-10">
+    <div className="w-full bg-mode/30 p-6 rounded-xl border border-borderprime flex flex-col gap-10">
       {/* ... Toggle Buttons ... */}
       <div className="flex justify-between items-center">
-        <h3 className="text-txt-02 font-bold uppercase tracking-wider text-title-01">Inventory Analysis</h3>
-        <div className="flex bg-secondary/50 p-1 rounded-lg border border-misc-03 text-xs font-bold">
-          <button onClick={() => setView("fish")} className={`px-3 py-1 rounded transition ${view === 'fish' ? 'bg-purple-500 text-white' : 'text-txt-01'}`}>FISH</button>
-          <button onClick={() => setView("both")} className={`px-3 py-1 rounded transition ${view === 'both' ? 'bg-misc-03 text-white' : 'text-txt-01'}`}>BOTH</button>
-          <button onClick={() => setView("copra")} className={`px-3 py-1 rounded transition ${view === 'copra' ? 'bg-amber-500 text-white' : 'text-txt-01'}`}>COPRA</button>
+        <h3 className="font-black uppercase tracking-wider text-title-01">Inventory Analysis</h3>
+        <div className="flex bg-mode/50 p-1 rounded-lg border border-borderprime text-xs font-bold">
+          <button onClick={() => setView("fish")} className={`px-3 py-1 rounded transition ${view === 'fish' ? 'bg-red-500 text-title-01' : 'text-title-02'}`}>FISH</button>
+          <button onClick={() => setView("both")} className={`px-3 py-1 rounded transition ${view === 'both' ? 'bg-green-500 text-title-01' : 'text-title-02'}`}>BOTH</button>
+          <button onClick={() => setView("copra")} className={`px-3 py-1  rounded transition ${view === 'copra' ? 'bg-blue-500 text-title-01' : 'text-title-02'}`}>COPRA</button>
         </div>
       </div>
 
@@ -48,7 +48,7 @@ export default function InventoryChartFish() {
                     transformStyle: "preserve-3d" 
                   }}
                 >
-                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20 font-bold whitespace-nowrap">
+                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-mode-reverse/60 text-title-01 text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20 font-bold whitespace-nowrap">
                     {item.fish} kg
                   </div>
                   <div className={`absolute top-0 right-0 h-full bg-purple-700 origin-right [transform:rotateY(90deg)] ${depthWidth}`} />
@@ -76,7 +76,7 @@ export default function InventoryChartFish() {
               )}
 
             </div>
-            <span className="text-[10px] text-txt-01 font-bold mt-6 uppercase">{item.label}</span>
+            <span className="text-[10px] text-txt-01 font-bold mt-6 uppercase text-text-primaris/70">{item.label}</span>
           </div>
         ))}
       </div>

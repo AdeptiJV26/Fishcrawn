@@ -14,8 +14,8 @@ export default function Settings() {
             Settings
           </span>
         </div>
-        <div className="bg-mode/50 border-2 border-borderprime rounded-xl mx-5 mt-10">
-          <div className="flex max-w-none  justify-center items-center my-8">
+        <div className="bg-mode/50 border-4 border-borderprime rounded-md mx-5 mt-10">
+          <div className="flex max-w-none min-h-28  justify-center items-center border-t-4 border-mode">
             <div className="flex flex-[3] justify-center items-center text-title-02 uppercase font-bold">
               Day / Night Toggle
             </div>
@@ -24,7 +24,7 @@ export default function Settings() {
             </div>
           </div>
 
-          <div className="flex max-w-none  justify-center items-center my-8">
+          <div className="flex max-w-none min-h-28  justify-center items-center border-t-4 border-mode">
             <div className="flex flex-[3] justify-center items-center text-title-02 uppercase font-bold">
               Password
             </div>
