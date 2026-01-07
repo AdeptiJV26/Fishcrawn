@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { name: "Dashboard", href: "/" },
   { name: "Products", href: "/products" },
+  { name: "Expenses", href: "/expenses" },
   { name: "Reports", href: "/reports" },
   { name: "Events", href: "/events" },
   { name: "Settings", href: "/settings" },
@@ -34,7 +35,7 @@ export default function Sidebar() {
                   ? "bg-highlighter text-sidebar-03 font-bold shadowl-lg rounded-lg"
                   : "text-mode hover:text-sidebar-01 hover:bg-sidebar-02/90 font-bold"
               }`}
-            > 
+            >
               {item.name}
             </Link>
           );

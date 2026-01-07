@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function GoHome() {
   return (
-    <div className="absolute top-0 left-0 border-2 border-button-01 bg-primary hover:bg-button-02 rounded-lg transition">
+    <div className="absolute top-0 left-0 border-2 text-mode border-button-01 bg-primary hover:bg-button-02 rounded-lg transition">
       <Link
         href="/"
         className="flex flex-row text-misc-01 font-bold rounded-lg hover:opacity-80 transition"
@@ -13,7 +13,7 @@ export default function GoHome() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="size-9 stroke-[2.5] text-icon-01 hover:text-icon-02"
+          className="size-9 stroke-[2.5] hover:text-icon-01"
         >
           <path
             strokeLinecap="round"
