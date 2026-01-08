@@ -38,10 +38,10 @@ export default function ExpensePieChart() {
         </div>
       </div>
 
-      <div className="relative flex-1 min-h-[250px] w-full">
+      <div className="relative flex-1 min-h-62.5 w-full">
         {/* Absolute Centered Total */}
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10">
-          <span className="text-[10px] font-black uppercase text-title-01 opacity-40 tracking-tighter">Total Exp.</span>
+          <span className="text-[10px] font-black uppercase text-title-01 opacity-40 tracking-tighter">Total Expense</span>
           <span className="text-2xl font-black text-title-01 tracking-tighter">
             ₱{total.toLocaleString()}
           </span>
