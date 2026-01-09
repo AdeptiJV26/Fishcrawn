@@ -29,13 +29,15 @@ export default function Products() {
   }, [supabase]);
 
   return (
-    <div className="flex flex-col h-screen w-full">
-      {/* HEADER */}
-      <div className="flex flex-col items-center py-4">
-        <GoHome />
-        <h1 className="text-title-01 text-4xl uppercase font-bold text-center mb-4">
+    <div className="relative flex flex-col h-screen w-full">
+      <div className="relative grid grid-cols-[1fr_2fr_1fr] items-center w-full py-4 min-h-24">
+        <div className="flex justify-start px-4">
+          <GoHome />
+        </div>
+        <h1 className="text-title-01 text-4xl uppercase font-bold text-center">
           Products
         </h1>
+        <div /> {/* Empty div to balance the grid */}
       </div>
 
       {/* CONTENT AREA */}
@@ -55,14 +57,18 @@ export default function Products() {
                   <span className="text-xs font-bold text-title-01 uppercase tracking-widest">
                     Product Name
                   </span>
-                  <h2 className="text-xl font-bold text-title-01">{product.name}</h2>
+                  <h2 className="text-xl font-bold text-title-01">
+                    {product.name}
+                  </h2>
                 </div>
 
                 <div className="flex flex-col items-start">
                   <span className="text-xs font-bold text-title-01 uppercase tracking-widest">
                     Category
                   </span>
-                  <h2 className="text-xl font-bold text-title-01">{product.category}</h2>
+                  <h2 className="text-xl font-bold text-title-01">
+                    {product.category}
+                  </h2>
                 </div>
 
                 <div className="flex items-center gap-8">
@@ -72,7 +78,9 @@ export default function Products() {
                     </span>
                     <p
                       className={`font-bold ${
-                        product.total_quantity < 20 ? "text-red-500 text-base" : "text-text-01"
+                        product.total_quantity < 20
+                          ? "text-red-500 text-base"
+                          : "text-text-01"
                       }`}
                     >
                       {product.total_quantity}
@@ -83,7 +91,9 @@ export default function Products() {
                     <span className="text-xs font-bold text-title-01 uppercase tracking-widest">
                       Price (Kilo)
                     </span>
-                    <p className="text-lg font-bold text-icon-02">₱ {product.price.toLocaleString()}</p>
+                    <p className="text-lg font-bold text-icon-02">
+                      ₱ {product.price.toLocaleString()}
+                    </p>
                   </div>
 
                   <button className="bg-button-01 border border-borderprime text-button-02 px-4 py-2 rounded-lg font-bold text-sm hover:bg-secondary transition">
