@@ -1,38 +1,30 @@
 "use client";
+import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    const isDarkNow = document.documentElement.classList.contains("dark");
-    setIsDark(isDarkNow);
-  }, []);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
-  const toggleTheme = () => {
-    const newMode = !isDark;
-    document.documentElement.classList.toggle("dark");
-    localStorage.setItem("theme", newMode ? "dark" : "light");
-    setIsDark(newMode);
-  };
+  const isDark = resolvedTheme === "dark";
 
   return (
-    <div 
-      onClick={toggleTheme}
-      className="flex flex-row gap-2 rounded-2xl border-borderprime border-3 p-2 w-32 bg-zinc-500/70 cursor-pointer select-none"
+    <div
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className="flex gap-2 rounded-2xl border-borderprime border-2 p-2 w-32 bg-zinc-500/70 cursor-pointer select-none"
     >
-      {/* Light Side Portion */}
-      <div className={`flex-1 flex items-center justify-center h-12 rounded-xl transition-all duration-200 ${
-        !isDark ? "bg-mode-reverse shadow-sm border-3 p-1 border-borderprime" : "bg-transparent"
+      <div className={`flex-1 h-12 rounded-xl flex items-center justify-center ${
+        !isDark ? "bg-mode-reverse border border-borderprime" : ""
       }`}>
-        <span className={`text-xl ${!isDark ? "opacity-100" : "opacity-60"}`}>☀️</span>
+        ☀️
       </div>
-
-      {/* Dark Side Portion */}
-      <div className={`flex-1 flex items-center justify-center h-12 rounded-xl transition-all duration-200 ${
-        isDark ? "bg-mode-reverse shadow-sm border-3 p-1 border-borderprime" : "bg-transparent"
+      <div className={`flex-1 h-12 rounded-xl flex items-center justify-center ${
+        isDark ? "bg-mode-reverse border border-borderprime" : ""
       }`}>
-        <span className={`text-xl ${isDark ? "opacity-100" : "opacity-60"}`}>🌙</span>
+        🌙
       </div>
     </div>
   );

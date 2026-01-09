@@ -26,7 +26,7 @@ export default function Produce() {
           </p>
           <div className="flex items-baseline gap-2">
             <p className="text-4xl font-black text-text-01">
-              {product.stock_level || 0}
+              {product.total_quantity || 0}
             </p>
             <p className="text-lg font-bold text-text-01/70 uppercase">
               {product.unit || "kg"}

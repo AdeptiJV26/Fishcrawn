@@ -1,51 +1,77 @@
 @import "tailwindcss";
 
-@theme {
-  /* --- LIGHT MODE (Default Variables) --- */
-  --color-primary: #a7f3d0;
-  --color-secondary: #22c55e;
-  --color-borderprime: #000000;
-  --color-highlighter: #000000;
-  --color-title-01: #0a0a0a;
-  --color-title-02: #ffffff;
-  --color-title-03: #083344;
-  --color-text-01: #1c1c1c;
-  --color-text-02: #f0f0f0;
-  --color-sidebar-01: #fafafa;
-  --color-sidebar-02: #000000;
-  --color-sidebar-03: #facc15;
-  --color-button-01: #000000;
-  --color-button-02: #ffffff;
-  --color-button-03: #2dd60b;
-  --color-mode: #000000;
-  --color-mode-reverse: #ffffff;
-  --color-icon-01: #000000;
-  --color-icon-02: #facc15;
-  --color-particles: #000000;
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 1. Define LIGHT MODE values in :root */
+:root {
+  --primary: #a7f3d0;
+  --secondary: #22c55e;
+  --borderprime: #000000;
+  --highlighter: #000000;
+  --title-01: #0a0a0a;
+  --title-02: #ffffff;
+  --title-03: #083344;
+  --text-01: #1c1c1c;
+  --text-02: #f0f0f0;
+  --sidebar-01: #fafafa;
+  --sidebar-02: #000000;
+  --sidebar-03: #facc15;
+  --button-01: #000000;
+  --button-02: #ffffff;
+  --button-03: #2dd60b;
+  --mode: #000000;
+  --mode-reverse: #ffffff;
+  --icon-01: #000000;
+  --icon-02: #facc15;
+  --particles: #000000;
 }
 
-/* --- DARK MODE OVERRIDES (Outside @theme) --- */
+/* 2. Overwrite values in .dark */
 .dark {
-  --color-primary: #16191a;
-  --color-secondary: #272a2e;
-  --color-borderprime: #fafafa;
-  --color-highlighter: #16003d;
-  --color-title-01: #ffffff;
-  --color-title-02: #0a0a0a;
-  --color-title-03: #facc15;
-  --color-text-01: #f0f0f0;
-  --color-text-02: #1c1c1c;
-  --color-sidebar-01: #000000;
-  --color-sidebar-02: #fafafa;
-  --color-sidebar-03: #facc15;
-  --color-button-01: #f2f2f2;
-  --color-button-02: #000000;
-  --color-button-03: #102cc7;
-  --color-mode: #cecece;
-  --color-mode-reverse: #000000;
-  --color-icon-01: #ffffff;
-  --color-icon-02: #facc15;
-  --color-particles: #ffffff;
+  --primary: #16191a;
+  --secondary: #272a2e;
+  --borderprime: #fafafa;
+  --highlighter: #16003d;
+  --title-01: #ffffff;
+  --title-02: #0a0a0a;
+  --title-03: #facc15;
+  --text-01: #f0f0f0;
+  --text-02: #1c1c1c;
+  --sidebar-01: #000000;
+  --sidebar-02: #fafafa;
+  --sidebar-03: #facc15;
+  --button-01: #f2f2f2;
+  --button-02: #000000;
+  --button-03: #102cc7;
+  --mode: #cecece;
+  --mode-reverse: #000000;
+  --icon-01: #ffffff;
+  --icon-02: #facc15;
+  --particles: #ffffff;
+}
+
+/* 3. Map Tailwind names to these dynamic variables */
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-borderprime: var(--borderprime);
+  --color-highlighter: var(--highlighter);
+  --color-title-01: var(--title-01);
+  --color-title-02: var(--title-02);
+  --color-title-03: var(--title-03);
+  --color-text-01: var(--text-01);
+  --color-text-02: var(--text-02);
+  --color-sidebar-01: var(--sidebar-01);
+  --color-sidebar-02: var(--sidebar-02);
+  --color-sidebar-03: var(--sidebar-03);
+  --color-button-01: var(--button-01);
+  --color-button-02: var(--button-02);
+  --color-button-03: var(--button-03);
+  --color-mode: var(--mode);
+  --color-mode-reverse: var(--mode-reverse);
+  --color-icon-01: var(--icon-01);
+  --color-icon-02: var(--icon-02);
+  --color-particles: var(--particles);
 }
 
 #notFoundImg {

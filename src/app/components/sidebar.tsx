@@ -6,7 +6,8 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { name: "Dashboard", href: "/" },
   { name: "Products", href: "/products" },
-  { name: "Expenses", href: "/expenses" },
+  { name: "Cash Flow", href: "/cashflow" },
+  { name: "Transaction Logs", href: "/transactions" },
   { name: "Reports", href: "/reports" },
   { name: "Events", href: "/events" },
   { name: "Settings", href: "/settings" },
@@ -19,7 +20,7 @@ export default function Sidebar() {
 
   return (
     <aside className="w-64 bg-secondary/70 flex flex-col z-10">
-      <div className="text-title-03 flex justify-start items-center px-6 text-2xl border-b-2 border-borderprime font-bold min-h-[70px]">
+      <div className="text-title-03 flex justify-start items-center px-6 text-2xl border-b-2 border-borderprime font-bold min-h-20">
         FishCrAwn
       </div>
 
